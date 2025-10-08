@@ -1,3 +1,4 @@
+/* Colors */
 :root {
   --primary: #796eff;
   --primary-light: #f6f3fc;
@@ -5,4 +6,13 @@
   --text-body: #4e5a65;
   --background-header: #fbfafe;
   --background-footer: #1d2830;
+}
+
+/* Desktop */
+
+h1 {
+  font-weight: semibold;
+}
+h2 {
+  color: var(--text-heading);
 }
