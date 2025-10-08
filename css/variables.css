@@ -8,11 +8,37 @@
   --background-footer: #1d2830;
 }
 
-/* Desktop */
-
 h1 {
   font-weight: semibold;
+  font-size: 32px;
+  line-height: 40px;
 }
+
 h2 {
-  color: var(--text-heading);
+  font-size: 20px;
+  line-height: 28px;
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+/* Desktop Fonts */
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 64px;
+    line-height: 76px;
+  }
+
+  h2 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  h3 {
+    font-size: 28px;
+    line-height: 36px;
+  }
 }
