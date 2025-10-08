@@ -1,38 +1,30 @@
-// add a listener to buttons
-const tabsButtonElement = document.querySelectorAll('.tabs-buttons')
-tabsButtonElement.forEach(addPlanetButtonListener)
+// Select all tab buttons
+const tabButtons = document.querySelectorAll('.tabs-button')
+const tabDetails = document.querySelectorAll('.tabs-detail')
 
-function addtabButtonListener(tabsButtonElement) {
-  tabsButtonElement.addEventListener('click', tabButtonClick)
-}
+// Add click listeners to each tab button
+tabButtons.forEach((button) => {
+  button.addEventListener('click', (event) => {
+    const clickedButton = event.currentTarget
 
-function tabButtonClick(event) {
-  const clickedButton = event.currentTarget
+    // Remove the "currently selected" class from all buttons and tabs
+    tabButtons.forEach((btn) =>
+      btn.classList.remove('currently-selected-button')
+    )
+    tabDetails.forEach((detail) =>
+      detail.classList.remove('currently-selected-tab')
+    )
 
-  // generate the class of the selected planet's details element
-  // for example: ".planet-details-Venus" or ".planet-details-Earth"
-  const detailsElementCssSelector =
-    '.planet-details-' + clickedButton.textContent
+    // Add the "currently selected" class to the clicked button
+    clickedButton.classList.add('currently-selected-button')
 
-  // find this element
-  const detailsElement = document.querySelector(detailsElementCssSelector)
+    // Determine which tab to show based on button text
+    // Example: "DJ Gear" → ".tabs-details-DJ"
+    const tabName = clickedButton.textContent.trim().split(' ')[0]
+    const selectedTab = document.querySelector(`.tabs-detail-${tabName}`)
 
-  // remove selected state from all buttons
-  tabsButtonElements.forEach(updateClickedButtonState)
-
-  // remove selected state from all details elements
-  const planetDetailElements = document.querySelectorAll('.planet-details')
-  planetDetailElements.forEach(updatePlanetDetailState)
-
-  // add selected state just to the clicked button
-  detailsElement.classList.add('currently-selected-planet')
-  clickedButton.classList.add('currently-selected-button')
-}
-
-function updateClickedButtonState(planetButtonElement) {
-  planetButtonElement.classList.remove('currently-selected-button')
-}
-
-function updatePlanetDetailState(planetDetailElement) {
-  planetDetailElement.classList.remove('currently-selected-planet')
-}
+    if (selectedTab) {
+      selectedTab.classList.add('currently-selected-tab')
+    }
+  })
+})
