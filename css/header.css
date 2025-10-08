@@ -37,8 +37,8 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: #1f2937;
-  font-size: 18px;
+  color: var(--text-heading);
+  font-size: medium;
   font-weight: 500;
   transition: color 0.3s ease;
 }
@@ -48,18 +48,18 @@ nav a:hover {
 }
 
 .tagline {
-  font-size: 36px;
+  font-size: 30px;
   font-weight: bold;
-  color: var(--primary);
+  color: var(--text-heading);
   margin-bottom: 30px;
-  letter-spacing: 1px;
+  letter-spacing: auto;
 }
 
 .tagline-subtext {
-  font-size: 16px;
-  color: var(--primary);
+  font-size: 18px;
+  color: var(--text-heading);
   margin-bottom: 30px;
-  letter-spacing: 1px;
+  letter-spacing: auto;
 }
 
 .hero-img {
