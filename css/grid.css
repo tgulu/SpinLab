@@ -1,0 +1,33 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  background-color: #fff4e6;
+}
+
+.wrapper > div {
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  background-color: var(--primary-light);
+  padding: 1em;
+  color: var(--primary);
+}
+
+.grid-text {
+  font: var();
+}
+
+.grid-subtext {
+  font: var();
+}
+
+.grid-header {
+  align-items: center;
+}
