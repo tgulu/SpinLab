@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/global.css">
     <title>SpinLab</title>
     <link rel="stylesheet" href="./css/colors.css" />
     <link rel="stylesheet" href="./css/header.css" />
@@ -25,13 +27,77 @@
         </ul>
       </nav>
     </header>
-    <div class="hero">
-      <img src="./images/hero.jpg" alt="hero image" />
-    </div>
-    <div class="trusted-by-text">
-      <p>Music gear coming out your eyeholes</p>
-    </div>
-    <main></main>
-    <script></script>
-  </body>
+    <main>
+        <section class="tabs">
+
+            <div class="tabs-container">
+
+
+                <div class="tabs-buttons">
+                    <button class="tabs-button currently-selected-button">DJ Gear</button>
+                    <button class="tabs-button">Guitar Gear</button>
+                    <button class="tabs-button">Drum Kit</button>
+                </div>
+
+                <div class="tabs-details tabs-details-DJ currently-selected-tabs">
+                    <div class="tabs-content">
+                        <h2>DJ WHHHA</h2>
+                        <p>Explore industry-standard decks, mixers, and controllers for every DJ setup. Find the perfect
+                            kit
+                            for
+                            mixing, scratching, and producing your own unique sound.</p>
+                        <p>Discover recommendations from top DJs and learn how to connect your setup for live
+                            performance
+                            and
+                            studio work.</p>
+                    </div>
+                    <div class="tabs-image">
+                        <img src="https://cdn.pixabay.com/photo/2015/10/12/15/13/dj-984245_1280.jpg" alt="DJ Gear">
+                        <p>(DJ setup example)</p>
+                    </div>
+                </div>
+
+                <div class="tabs-details tabs-details-Guitar">
+                    <div class="tabs-content">
+                        <h2>Guitar Gear</h2>
+                        <p>From electric to acoustic, explore guitars, amps, pedals, and accessories that define your
+                            tone.
+                        </p>
+                        <p>Compare legendary models, effects setups, and recording techniques used by professional
+                            guitarists.
+                        </p>
+                    </div>
+                    <div class="tabs-image">
+                        <img src="https://cdn.pixabay.com/photo/2016/11/29/09/32/adult-1868561_1280.jpg"
+                            alt="Guitar Gear">
+                        <p>(Guitar performance example)</p>
+                    </div>
+                </div>
+
+                <div class="tabs-details tabs-details-Drum">
+                    <div class="tabs-content">
+                        <h2>Drum Kit</h2>
+                        <p>Find your perfect drum setup — acoustic, hybrid, or electronic. Learn about tuning, cymbal
+                            selection,
+                            and miking techniques for live and studio use.</p>
+                    </div>
+                    <div class="tabs-image">
+                        <img src="https://cdn.pixabay.com/photo/2017/08/01/21/10/drums-2568186_1280.jpg" alt="Drum Kit">
+                        <p>(Drum kit setup example)</p>
+                    </div>
+                </div>
+
+                <p>(All information is for demonstration purposes)</p>
+            </div>
+        </section>
+
+
+    </main>
+    <script src="js/tabs.js">
+
+
+    </script>
+
+</body>
+
 </html>
