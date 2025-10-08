@@ -24,7 +24,7 @@ header {
   font-weight: bold;
   color: #1e40af;
   margin-bottom: 30px;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 nav ul {
@@ -47,16 +47,32 @@ nav a:hover {
   color: var(--primary);
 }
 
+.tagline {
+  font-size: 36px;
+  font-weight: bold;
+  color: var(--primary);
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.tagline-subtext {
+  font-size: 16px;
+  color: var(--primary);
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
 .hero-img {
   position: relative;
   width: 50px;
   height: 50px;
+  top: -100px;
   object-fit: scale-down;
   border-radius: 25%;
-  border: 8px solid white;
+  border: 8px solid var(--primary);
   margin: -100px auto 40px auto; /* Negative margin to overlap */
   display: block;
   z-index: 2;
   overflow: visible;
-  background-color: var(--primary-light);
+  background-color: var(--primary);
 }
