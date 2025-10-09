@@ -22,8 +22,8 @@ header {
 .website__logo {
   font-size: 20px;
   font-weight: bold;
-  color: #1e40af;
-  margin-bottom: 30px;
+  color: var(--primary);
+  margin-bottom: 10px;
   letter-spacing: 1px;
 }
 
@@ -52,32 +52,47 @@ nav a:hover {
   color: var(--primary);
 }
 
+@media (min-width: 1200px) {
+  .tagline {
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+}
+
 .tagline {
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bold;
   color: var(--text-heading);
-  margin-bottom: 30px;
   letter-spacing: auto;
+  /* margin-bottom: 300px; */
+}
+
+@media (min-width: 1200px) {
+  .tagline-subtext {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
 }
 
 .tagline-subtext {
   font-size: 18px;
   color: var(--text-heading);
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   letter-spacing: auto;
 }
 
-.hero-img {
+.hero-image {
   position: relative;
-  width: 50px;
-  height: 50px;
-  top: -100px;
-  object-fit: scale-down;
-  border-radius: 25%;
-  border: 8px solid var(--primary);
-  margin: -100px auto 40px auto; /* Negative margin to overlap */
-  display: block;
-  z-index: 2;
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+  margin: 40px auto 40px auto;
   overflow: visible;
-  background-color: var(--primary);
+}
+
+@media (min-width: 1200px) {
+  .hero-image {
+    width: 700px;
+    height: auto;
+  }
 }
