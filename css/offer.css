@@ -1,0 +1,73 @@
+/* ============================= */
+/* Offer Section Layout */
+/* ============================= */
+
+.offer {
+  display: flex;
+}
+
+.offer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 70px 10px;
+  font-size: 20px;
+}
+
+@media (min-width: 1200px) {
+  .offer-container {
+    padding: 70px 120px;
+  }
+}
+.offer-detials p {
+  font-size: 15px;
+}
+.offer-detials h2 {
+  font-size: 10px;
+}
+
+@media (min-width: 1200px) {
+  .offer-detials h2 {
+    font-size: 30px;
+  }
+
+  .offer-detials p {
+    font-size: 15px;
+  }
+}
+
+.offer-img {
+  width: 120px;
+  height: auto;
+}
+
+@media (min-width: 1200px) {
+  .offer-img {
+    width: 400px;
+  }
+}
+
+.offer-button {
+  cursor: pointer;
+  border: none;
+  width: 40%;
+  border-radius: 4px;
+  height: 40px;
+  font-size: 12px;
+  padding: 10px 10px;
+  background-color: var(--primary-light);
+}
+
+@media (min-width: 1200px) {
+  .offer-button {
+    width: 70%;
+    height: 120px;
+    font-size: 20px;
+  }
+}
+
+.offer-button:hover {
+  border-top: 8px solid var(--primary);
+  border-bottom: none;
+}
