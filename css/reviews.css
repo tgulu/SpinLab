@@ -1,0 +1,64 @@
+/* tabs */
+
+/* .reviews */
+.reviews {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 40px 100px;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* buttons section */
+.reviews-buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+/* reviews-container-container */
+
+/* reviews-button */
+.reviews-button {
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  height: 200px;
+  font-size: 20px;
+  padding: 10px 10px;
+  background: none;
+  margin-bottom: 10px;
+}
+
+/* reviews-button:hover */
+.reviews-button:hover {
+  border-top: 8px solid var(--primary);
+  background-color: var(--primary-light);
+  border-bottom: none;
+}
+
+@media (min-width: 1200px) {
+  .reviews-button:hover {
+    transition: all 300ms;
+  }
+}
+
+/* Active button state (matches JS class) */
+.reviews-button.currently-review-button {
+  background: var(--primary-light);
+  border-top: 8px solid var(--primary);
+}
+
+/* Hide all reviews by default */
+.reviews-details {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show the active review with fade-in effect */
+.currently-review-tab {
+  display: block;
+  opacity: 1;
+}
