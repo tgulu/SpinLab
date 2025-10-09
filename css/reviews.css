@@ -1,9 +1,12 @@
-/* .reviews */
+/* ============================= */
+/* Reviews Section Layout */
+/* ============================= */
+
 .reviews {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  padding: 40px 50px;
+  padding: 40px 30px;
   text-align: center;
 }
 
@@ -13,16 +16,20 @@
   }
 }
 
-/* buttons section */
+/* ============================= */
+/* Buttons Container */
+/* ============================= */
+
 .reviews-buttons-container {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
 
-/* reviews-container-container */
+/* ============================= */
+/* Review Buttons */
+/* ============================= */
 
-/* reviews-button */
 .reviews-button {
   cursor: pointer;
   border: none;
@@ -41,14 +48,18 @@
 @media (min-width: 1200px) {
   .reviews-button {
     width: 100%;
+    font-size: 20px;
+  }
+
+  .reviews-button h3 {
     font-size: 30px;
   }
 }
 
-/* reviews-button:hover */
+/* Hover Effect */
 .reviews-button:hover {
   border-top: 8px solid var(--primary);
-  background-color: var(--primary-light);
+  background-colour: var(--primary-light);
   border-bottom: none;
 }
 
@@ -58,18 +69,30 @@
   }
 }
 
+/* Active Button State */
 .reviews-button.currently-review-button {
   background: var(--primary-light);
   border-top: 8px solid var(--primary);
 }
 
-/* Hide all reviews by default */
+/* ============================= */
+/* Review Details */
+/* ============================= */
+
+/* Hide All Reviews by Default */
 .reviews-details {
   display: none;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
+/* Active Review (Visible) */
+.currently-review-tab {
+  display: block;
+  opacity: 1;
+}
+
+/* Review Text */
 .review-text {
   font-size: 15px;
 }
@@ -78,10 +101,4 @@
   .review-text {
     font-size: 20px;
   }
-}
-
-/* Show the active review with fade-in effect */
-.currently-review-tab {
-  display: block;
-  opacity: 1;
 }
