@@ -59,7 +59,7 @@
 /* Hover Effect */
 .reviews-button:hover {
   border-top: 8px solid var(--primary);
-  background-colour: var(--primary-light);
+  background-color: var(--primary-light);
   border-bottom: none;
 }
 
