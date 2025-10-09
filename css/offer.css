@@ -20,20 +20,24 @@
     padding: 70px 120px;
   }
 }
-.offer-detials p {
+
+.offer-detials h2 {
   font-size: 15px;
 }
-.offer-detials h2 {
+
+.offer-detials p {
   font-size: 10px;
+  margin-bottom: 10px;
 }
 
 @media (min-width: 1200px) {
   .offer-detials h2 {
-    font-size: 30px;
+    font-size: 35px;
   }
 
   .offer-detials p {
-    font-size: 15px;
+    font-size: 20px;
+    margin-bottom: 70px;
   }
 }
 
