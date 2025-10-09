@@ -44,7 +44,6 @@
   }
 }
 
-/* Active button state (matches JS class) */
 .reviews-button.currently-review-button {
   background: var(--primary-light);
   border-top: 8px solid var(--primary);
