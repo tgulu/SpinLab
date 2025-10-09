@@ -28,3 +28,26 @@ tabButtons.forEach((button) => {
     }
   })
 })
+
+const reviewButtons = document.querySelectorAll('.reviews-button')
+const reviewDetails = document.querySelectorAll('.reviews-details')
+
+reviewButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const reviewId = button.dataset.review
+
+    // Remove active classes
+    reviewButtons.forEach((btn) =>
+      btn.classList.remove('currently-review-button')
+    )
+    reviewDetails.forEach((detail) =>
+      detail.classList.remove('currently-review-tab')
+    )
+
+    // Add active classes to clicked button and matching review
+    button.classList.add('currently-review-button')
+    document
+      .querySelector(`.reviews-details[data-review="${reviewId}"]`)
+      .classList.add('currently-review-tab')
+  })
+})
