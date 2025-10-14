@@ -1,0 +1,67 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Strandberg Classic Granite NX",
+      "description": "Strandberg's headless neck design allows for greater playability and comfort.",
+      "price": 1799,
+      "image": "../images/products/strandberg.avif",
+      "alt": "Strandberg Classic Granite NX guitar",
+      "category": "guitars"
+    },
+    {
+      "id": 2,
+      "name": "Marcus Miller V10DX-5 TS",
+      "description": "Deep, resonant tone with beautiful flamed maple finish.",
+      "price": 1799,
+      "image": "../images/products/miller_bass.jpg",
+      "alt": "Marcus Miller V10DX-5 TS bass guitar",
+      "category": "bass"
+    },
+    {
+      "id": 3,
+      "name": "Zildjian Alchem-E Gold Series Electronic Drum Kit",
+      "description": "High-quality electronic drum set.",
+      "price": 2799,
+      "image": "../images/products/zildjian_drums.jpg",
+      "alt": "Zildjian Alchem-E Gold Series Electronic Drum Kit",
+      "category": "drums"
+    },
+    {
+      "id": 4,
+      "name": "CDJ-3000 Pioneer",
+      "description": "The CDJ-3000 is the pinnacle of professional DJ multi players, crafted to elevate your performance with a suite of cutting-edge features and refined engineering.",
+      "price": 1799,
+      "image": "../images/products/CDJ-3000_2__00550.jpg",
+      "alt": "CDJ-3000 Pioneer DJ controller",
+      "category": "dj"
+    },
+    {
+      "id": 5,
+      "name": "Nord Stage 4 88",
+      "description": "The Nord Stage 4 is a versatile stage piano that combines advanced piano, organ, and synth sounds with a user-friendly interface.",
+      "price": 3799,
+      "image": "../images/products/NOR0096-Nord_Stage4_88__51193.jpg",
+      "alt": "Nord Stage 4 88 keyboard",
+      "category": "keyboards"
+    },
+    {
+      "id": 6,
+      "name": "Bamboo Didgeridoo",
+      "description": "The didgeridoo is one of the oldest instruments in the world. Meinl have made it easier than ever to get started with this quality Bamboo Didgeridoo at a price that's perfect for beginners.",
+      "price": 30,
+      "image": "../images/products/didgeridoo2.jpg",
+      "alt": "Bamboo Didgeridoo",
+      "category": "world"
+    },
+    {
+      "id": 1,
+      "name": "Yamaha Pacifica",
+      "description": "Yamaha Pacifica is known for its versatility and playability, making it a great choice for musicians of all levels.",
+      "price": 499,
+      "image": "../images/products/yamaha_pacifica.jpg",
+      "alt": "Yamaha Pacifica guitar",
+      "category": "guitars"
+    }
+  ]
+}
