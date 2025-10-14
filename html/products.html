@@ -1,112 +1,105 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/global.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <title>SpinLab - Products</title>
-  </head>
 
-  <body>
-    <header>
-      <div class="semi-circle">
-        <nav>
-          <div class="website__logo">
-            <img src="images/logo.webp" alt="SpinLab Logo" />
-            <h1>Welcome to SpinLab</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <title>SpinLab - Products</title>
+</head>
+
+<body>
+  <header>
+    <div class="semi-circle">
+      <nav>
+        <div class="website__logo">
+          <img src="/images/logo.png" alt="SpinLab Logo" />
+          <h1>Welcome to SpinLab</h1>
+        </div>
+        <ul class="nav-links">
+          <li><a href="../home.html">Home</a></li>
+          <li><a href="../html/about.html">About</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="../html/contact.html">Contact</a></li>
+        </ul>
+        <div class="cart-wrapper">
+          <div class="cart-icon" id="cartIcon">
+            <i class="fa fa-shopping-cart"></i>
+            <span id="cartCount">0</span>
           </div>
-          <ul class="nav-links">
-            <li><a href="../home.html">Home</a></li>
-            <li><a href="../html/about.html">About</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="../html/contact.html">Contact</a></li>
-          </ul>
-          <div class="cart-wrapper">
-            <div class="cart-icon" id="cartIcon">
-              <i class="fa fa-shopping-cart"></i>
-              <span id="cartCount">0</span>
-            </div>
-            <div class="cart-dropdown" id="cartDropdown">
-              <h3>Your Cart</h3>
-              <div id="cartItems"></div>
-              <div id="cartTotal"></div>
-              <button id="clearCartBtn">Clear Cart</button>
-              <button id="checkoutBtn">Checkout</button>
-            </div>
+          <div class="cart-dropdown" id="cartDropdown">
+            <h3>Your Cart</h3>
+            <div id="cartItems"></div>
+            <div id="cartTotal"></div>
+            <button id="clearCartBtn">Clear Cart</button>
+            <button id="checkoutBtn">Checkout</button>
           </div>
-        </nav>
-        <p class="tagline">Our products</p>
+        </div>
+      </nav>
+      <!-- <p class="tagline">Our products</p> -->
+    </div>
+    <p class="tagline-subtext">Find the product you're looking for</p>
+    <search class="product-search">
+      <input type="text" id="searchInput" class="product-search-input" placeholder="Search for products..." />
+      <button class="product-search-button" onclick="searchProducts()">
+        Search
+      </button>
+    </search>
+  </header>
+
+  <main>
+    <section class="product-grid">
+      <h1 class="product-grid-header">Things we sell</h1>
+
+      <!-- Loading indicator -->
+      <div id="loading">
+        <p>Loading products...</p>
       </div>
-      <p class="tagline-subtext">Find the product you're looking for</p>
-      <search class="product-search">
-        <input
-          type="text"
-          id="searchInput"
-          class="product-search-input"
-          placeholder="Search for products..."
-        />
-        <button class="product-search-button" onclick="searchProducts()">
-          Search
-        </button>
-      </search>
-    </header>
 
-    <main>
-      <section class="product-grid">
-        <h1 class="product-grid-header">Things we sell</h1>
+      <!-- Products will be inserted here -->
+      <div class="wrapper-product" id="productsContainer"></div>
 
-        <!-- Loading indicator -->
-        <div id="loading">
-          <p>Loading products...</p>
+      <!-- No results message -->
+      <div id="noResults">
+        <p>No products found matching your search.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-links-container">
+        <div class="footer-links">
+          <a href="#">Company</a>
+          <a href="#">About Us</a>
+          <a href="#">Contact Us</a>
         </div>
-
-        <!-- Products will be inserted here -->
-        <div class="wrapper-product" id="productsContainer"></div>
-
-        <!-- No results message -->
-        <div id="noResults">
-          <p>No products found matching your search.</p>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <div class="footer-container">
-        <div class="footer-links-container">
-          <div class="footer-links">
-            <a href="#">Company</a>
-            <a href="#">About Us</a>
-            <a href="#">Contact Us</a>
-          </div>
-          <div class="footer-links">
-            <a href="#">Legal</a>
-            <a href="#">Cookies Policy</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-          </div>
-        </div>
-
-        <div class="footer-socials">
-          <p>&copy; 2025 SpinLab. All rights reserved.</p>
-          <div class="social-media-icons">
-            <a href="#" class="fa fa-facebook-f"></a>
-            <a href="#" class="fa fa-twitter"></a>
-            <a href="#" class="fa fa-instagram"></a>
-          </div>
+        <div class="footer-links">
+          <a href="#">Legal</a>
+          <a href="#">Cookies Policy</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
         </div>
       </div>
-    </footer>
 
-    <script src="../js/products.js"></script>
-  </body>
+      <div class="footer-socials">
+        <p>&copy; 2025 SpinLab. All rights reserved.</p>
+        <div class="social-media-icons">
+          <a href="#" class="fa fa-facebook-f"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-instagram"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/products.js"></script>
+</body>
+
 </html>
