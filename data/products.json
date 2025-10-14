@@ -53,6 +53,15 @@
       "image": "../images/products/didgeridoo2.jpg",
       "alt": "Bamboo Didgeridoo",
       "category": "world"
+    },
+    {
+      "id": 1,
+      "name": "Yamaha Pacifica",
+      "description": "Yamaha Pacifica is known for its versatility and playability, making it a great choice for musicians of all levels.",
+      "price": 499,
+      "image": "../images/products/yamaha_pacifica.jpg",
+      "alt": "Yamaha Pacifica guitar",
+      "category": "guitars"
     }
   ]
 }
