@@ -1,14 +1,14 @@
-
 .cart-wrapper {
   position: relative;
   display: inline-block;
+  z-index: 9999; /* Always on top of header/nav */
 }
 
 /* Cart icon and badge */
 .cart-icon {
   position: relative;
   cursor: pointer;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: #333;
   transition: transform 0.2s ease;
 }
@@ -17,7 +17,7 @@
   transform: scale(1.1);
 }
 
-.cart-icon #cartCount {
+#cartCount {
   position: absolute;
   top: -8px;
   right: -10px;
@@ -29,32 +29,35 @@
   font-weight: 600;
 }
 
-/* Dropdown panel container */
+/* Dropdown panel */
 .cart-dropdown {
   visibility: hidden;
   opacity: 0;
   transform: translateY(-10px);
-  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0s linear 0.25s;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
   position: absolute;
   right: 0;
   top: 2.5rem;
+  width: 340px;
+  max-height: 70vh; /* Allow it to expand tall but not off-screen */
+  overflow: hidden; /* Will control inner scroll area */
   background: white;
-  width: 320px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
   padding: 1rem;
-  z-index: 1000;
+  z-index: 99999;
 }
 
-/* When dropdown is open */
+/* Show dropdown */
 .cart-dropdown.show {
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 0s;
 }
 
-/* Decorative pointer arrow */
+/* Pointer arrow */
 .cart-dropdown::before {
   content: '';
   position: absolute;
@@ -66,7 +69,7 @@
   filter: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.05));
 }
 
-/* Cart title */
+/* Title */
 .cart-dropdown h3 {
   margin-top: 0;
   font-size: 1.1rem;
@@ -76,48 +79,48 @@
   font-weight: 600;
 }
 
-/* Scrollable area for items */
+/* Scrollable inner area */
 #cartItems {
-  max-height: 300px;
+  max-height: 55vh; /* scrollable portion */
   overflow-y: auto;
   margin-bottom: 0.75rem;
   padding-right: 4px;
 }
 
-/* Optional custom scrollbar */
+/* Custom scrollbar (optional) */
 #cartItems::-webkit-scrollbar {
   width: 6px;
 }
-
 #cartItems::-webkit-scrollbar-thumb {
   background-color: #ccc;
   border-radius: 4px;
 }
 
-/* Each item in the dropdown */
-.cart-dropdown .cart-item {
+/* Each item */
+.cart-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0.5rem 0;
+  margin: 0.6rem 0;
   gap: 0.5rem;
+  animation: cart-pop 0.2s ease;
 }
 
-.cart-dropdown .cart-item img {
-  width: 40px;
-  height: 40px;
+.cart-item img {
+  width: 45px;
+  height: 45px;
   object-fit: cover;
   border-radius: 8px;
   flex-shrink: 0;
 }
 
-.cart-dropdown .cart-item div {
+.cart-item div {
   flex-grow: 1;
   font-size: 0.9rem;
   color: #333;
 }
 
-.cart-dropdown .cart-item button {
+.cart-item button {
   background: transparent;
   color: #999;
   border: none;
@@ -126,22 +129,20 @@
   transition: color 0.2s ease;
 }
 
-.cart-dropdown .cart-item button:hover {
+.cart-item button:hover {
   color: crimson;
 }
 
-/* Total and buttons */
+/* Total + buttons */
 #cartTotal {
   font-weight: 600;
   text-align: right;
-  margin-top: 0.5rem;
-  margin-bottom: 0.75rem;
+  margin: 0.5rem 0;
 }
 
-.cart-dropdown button#clearCartBtn,
-.cart-dropdown button#checkoutBtn {
+#clearCartBtn,
+#checkoutBtn {
   width: 100%;
-  display: block;
   background: #333;
   color: white;
   border: none;
@@ -153,12 +154,12 @@
   transition: background 0.2s ease;
 }
 
-.cart-dropdown button#clearCartBtn:hover,
-.cart-dropdown button#checkoutBtn:hover {
+#clearCartBtn:hover,
+#checkoutBtn:hover {
   background: #555;
 }
 
-/* Optional subtle animation for cart item add */
+/* Add pop animation */
 @keyframes cart-pop {
   0% {
     transform: scale(0.9);
@@ -170,6 +171,8 @@
   }
 }
 
-.cart-item {
-  animation: cart-pop 0.2s ease;
+header,
+nav,
+.semi-circle {
+  overflow: visible !important;
 }
