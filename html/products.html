@@ -1,165 +1,189 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>SpinLab</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../css/global.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <title>SpinLab</title>
-</head>
-
-<body>
-  <header>
-    <div class="semi-circle">
-      <nav>
-        <div class="website__logo">
-          <img src="images/logo.webp" alt="SpinLab Logo" />
-          <h1>Welcome to SpinLab</h1>
-        </div>
-        <ul class="nav-links">
-          <li><a href="../home.html">Home</a></li>
-          <li><a href="/html/about.html">About</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="/html/contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <p class="tagline">Our products</p>
-    </div>
-    <p class="tagline-subtext">Find the product you're looking for</p>
-    <search class="product-search">
-      <input type="text" class="product-search-input" placeholder="Search for products..." />
-      <button class="product-search-button">Search</button>
-    </search>
-  </header>
-  <main>
-    <section class="product-grid">
-      <h1 class="product-grid-header">Things we sell</h1>
-      <div class="wrapper-product">
-        <article class="product-card">
-          <div class="image-container">
-            <img src="../images/products/strandberg.avif" alt="Strandberg Classic Granite NX guitar" />
+  <body>
+    <header>
+      <div class="semi-circle">
+        <nav>
+          <div class="website__logo">
+            <img src="images/logo.webp" alt="SpinLab Logo" />
+            <h1>Welcome to SpinLab</h1>
           </div>
-          <h2 class="product-name">Strandberg Classic Granite NX</h2>
-          <p class="product-description">
-            Strandberg's headless neck design allows for greater playability
-            and comfort.
-          </p>
-          <div class="price-container">
-            <span class="price">£1,799</span>
-            <button class="add-to-cart">Add to Cart</button>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="image-container">
-            <img src="../images/products/miller_bass.jpg" alt="Marcus Miller V10DX-5 TS bass guitar" />
-          </div>
-          <h2 class="product-name">Marcus Miller V10DX-5 TS</h2>
-          <p class="product-description">
-            Deep, resonant tone with beautiful flamed maple finish.
-          </p>
-          <div class="price-container">
-            <span class="price">£1,799</span>
-            <button class="add-to-cart">Add to Cart</button>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="image-container">
-            <img src="../images/products/zildjian_drums.jpg" alt="Zildjian Alchem-E Gold Series Electronic Drum Kit" />
-          </div>
-          <h2 class="product-name">
-            Zildjian Alchem-E Gold Series Electronic Drum Kit
-          </h2>
-          <p class="product-description">High-quality electronic drum set.</p>
-          <div class="price-container">
-            <span class="price">£2,799</span>
-            <button class="add-to-cart">Add to Cart</button>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="image-container">
-            <img src="../images/products/CDJ-3000_2__00550.jpg" alt="CDJ-3000 Pioneer DJ controller" />
-          </div>
-          <h2 class="product-name">CDJ-3000 Pioneer</h2>
-          <p class="product-description">
-            The CDJ-3000 is the pinnacle of professional DJ multi players,
-            crafted to elevate your performance with a suite of cutting-edge
-            features and refined engineering.
-          </p>
-          <div class="price-container">
-            <span class="price">£1,799</span>
-            <button class="add-to-cart">Add to Cart</button>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="image-container">
-            <img src="../images/products/NOR0096-Nord_Stage4_88__51193.jpg" alt="Nord Stage 4 88 keyboard" />
-          </div>
-          <h2 class="product-name">Nord Stage 4 88</h2>
-          <p class="product-description">
-            The Nord Stage 4 is a versatile stage piano that combines advanced
-            piano, organ, and synth sounds with a user-friendly interface.
-          </p>
-          <div class="price-container">
-            <span class="price">£3,799</span>
-            <button class="add-to-cart">Add to Cart</button>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="image-container">
-            <img src="../images/products/didgeridoo2.jpg" alt="Bamboo Didgeridoo" />
-          </div>
-          <h2 class="product-name">Bamboo Didgeridoo</h2>
-          <p class="product-description">
-            The didgeridoo is one of the oldest instruments in the world.
-            Meinl have made it easier than ever to get started with this
-            quality Bamboo Didgeridoo at a price that's perfect for beginners.
-          </p>
-          <div class="price-container">
-            <span class="price">£30</span>
-            <button class="add-to-cart">Add to Cart</button>
-          </div>
-        </article>
+          <ul class="nav-links">
+            <li><a href="../home.html">Home</a></li>
+            <li><a href="../html/about.html">About</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="../html/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <p class="tagline">Our products</p>
       </div>
-    </section>
-  </main>
+      <p class="tagline-subtext">Find the product you're looking for</p>
+      <search class="product-search">
+        <input
+          type="text"
+          class="product-search-input"
+          placeholder="Search for products..."
+        />
+        <button class="product-search-button">Search</button>
+      </search>
+    </header>
+    <main>
+      <section class="product-grid">
+        <h1 class="product-grid-header">Things we sell</h1>
+        <div class="wrapper-product">
+          <article class="product-card">
+            <div class="image-container">
+              <img
+                src="../images/products/strandberg.avif"
+                alt="Strandberg Classic Granite NX guitar"
+              />
+            </div>
+            <h2 class="product-name">Strandberg Classic Granite NX</h2>
+            <p class="product-description">
+              Strandberg's headless neck design allows for greater playability
+              and comfort.
+            </p>
+            <div class="price-container">
+              <span class="price">£1,799</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </article>
 
-  <footer>
-    <div class="footer-container">
-      <div class="footer-links-container">
-        <div class="footer-links">
-          <a href="#">Company</a>
-          <a href="#">About Us</a>
-          <a href="#">Contact Us</a>
+          <article class="product-card">
+            <div class="image-container">
+              <img
+                src="../images/products/miller_bass.jpg"
+                alt="Marcus Miller V10DX-5 TS bass guitar"
+              />
+            </div>
+            <h2 class="product-name">Marcus Miller V10DX-5 TS</h2>
+            <p class="product-description">
+              Deep, resonant tone with beautiful flamed maple finish.
+            </p>
+            <div class="price-container">
+              <span class="price">£1,799</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="image-container">
+              <img
+                src="../images/products/zildjian_drums.jpg"
+                alt="Zildjian Alchem-E Gold Series Electronic Drum Kit"
+              />
+            </div>
+            <h2 class="product-name">
+              Zildjian Alchem-E Gold Series Electronic Drum Kit
+            </h2>
+            <p class="product-description">High-quality electronic drum set.</p>
+            <div class="price-container">
+              <span class="price">£2,799</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="image-container">
+              <img
+                src="../images/products/CDJ-3000_2__00550.jpg"
+                alt="CDJ-3000 Pioneer DJ controller"
+              />
+            </div>
+            <h2 class="product-name">CDJ-3000 Pioneer</h2>
+            <p class="product-description">
+              The CDJ-3000 is the pinnacle of professional DJ multi players,
+              crafted to elevate your performance with a suite of cutting-edge
+              features and refined engineering.
+            </p>
+            <div class="price-container">
+              <span class="price">£1,799</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="image-container">
+              <img
+                src="../images/products/NOR0096-Nord_Stage4_88__51193.jpg"
+                alt="Nord Stage 4 88 keyboard"
+              />
+            </div>
+            <h2 class="product-name">Nord Stage 4 88</h2>
+            <p class="product-description">
+              The Nord Stage 4 is a versatile stage piano that combines advanced
+              piano, organ, and synth sounds with a user-friendly interface.
+            </p>
+            <div class="price-container">
+              <span class="price">£3,799</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="image-container">
+              <img
+                src="../images/products/didgeridoo2.jpg"
+                alt="Bamboo Didgeridoo"
+              />
+            </div>
+            <h2 class="product-name">Bamboo Didgeridoo</h2>
+            <p class="product-description">
+              The didgeridoo is one of the oldest instruments in the world.
+              Meinl have made it easier than ever to get started with this
+              quality Bamboo Didgeridoo at a price that's perfect for beginners.
+            </p>
+            <div class="price-container">
+              <span class="price">£30</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </article>
         </div>
-        <div class="footer-links">
-          <a href="#">Legal</a>
-          <a href="#">Cookies Policy</a>
-          <a href="#">Priivacy Policy</a>
-          <a href="#">Terms of Service</a>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-links-container">
+          <div class="footer-links">
+            <a href="#">Company</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+          </div>
+          <div class="footer-links">
+            <a href="#">Legal</a>
+            <a href="#">Cookies Policy</a>
+            <a href="#">Priivacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+
+        <div class="footer-socials">
+          <p>&copy; 2025 SpinLab. All rights reserved.</p>
+          <div class="social-media-icons">
+            <a href="#" class="fa fa-facebook-f"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+          </div>
         </div>
       </div>
-
-      <div class="footer-socials">
-        <p>&copy; 2025 SpinLab. All rights reserved.</p>
-        <div class="social-media-icons">
-          <a href="#" class="fa fa-facebook-f"></a>
-          <a href="#" class="fa fa-twitter"></a>
-          <a href="#" class="fa fa-instagram"></a>
-        </div>
-      </div>
-    </div>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>
