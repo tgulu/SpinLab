@@ -2,16 +2,21 @@
 /* About Us Section  */
 /* ============================= */
 
+.about {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 20px;
+}
+
 .about-us-container {
   display: flex;
   justify-content: center;
-  margin: 0 auto;
-  padding: 700px 40px;
 }
 
 @media (min-width: 1200px) {
   .about-us-container {
-    padding: 70px 120px;
   }
 }
 
