@@ -1,0 +1,57 @@
+/* ============================= */
+/* About Us Section  */
+/* ============================= */
+
+.about-us-container {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 700px 40px;
+}
+
+@media (min-width: 1200px) {
+  .about-us-container {
+    padding: 70px 120px;
+  }
+}
+
+.about-us-title {
+  font-size: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+@media (min-width: 1200px) {
+  .about-us-title {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+}
+
+.about-us-detials {
+  padding: 40px 20px;
+}
+
+.about-us-detials p {
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 1200px) {
+  .about-us p {
+    font-size: 20px;
+    margin-bottom: 70px;
+  }
+}
+
+.about-us-image {
+  width: 120px;
+  height: auto;
+}
+
+@media (min-width: 1200px) {
+  .about-us-image {
+    width: 400px;
+  }
+}
