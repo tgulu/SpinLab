@@ -89,6 +89,13 @@ function searchProducts() {
   displayProducts(filteredProducts)
 }
 
+function updateCartCount() {
+  const cart = JSON.parse(localStorage.getItem('cart') || '[]')
+  const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0)
+  const cartCount = document.getElementById('cartCount')
+  if (cartCount) cartCount.textContent = totalItems
+}
+
 // Add to cart functionality
 function addToCart(productId) {
   const product = allProducts.find((p) => p.id === productId)
@@ -102,6 +109,8 @@ function addToCart(productId) {
   alert(`Added "${product.name}" to cart!`)
 
   let cart = JSON.parse(localStorage.getItem('cart') || '[]')
+
+  updateCartCount()
 
   // Check if product already in cart
   const existingItem = cart.find((item) => item.id === productId)
@@ -119,6 +128,8 @@ function addToCart(productId) {
   }
 
   localStorage.setItem('cart', JSON.stringify(cart))
+  updateCartCount()
+  renderMiniCart()
 }
 
 // Allow search on Enter key
@@ -142,4 +153,72 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Load products when page loads
   loadProducts()
+  const cartWrapper = document.querySelector('.cart-wrapper')
+  const cartIcon = document.getElementById('cartIcon')
+  const cartDropdown = document.getElementById('cartDropdown')
+  const clearCartBtn = document.getElementById('clearCartBtn')
+  const checkoutBtn = document.getElementById('checkoutBtn')
+
+  if (cartIcon && cartDropdown) {
+    cartIcon.addEventListener('click', (e) => {
+      e.stopPropagation()
+      const isVisible = cartDropdown.classList.contains('show')
+      document
+        .querySelectorAll('.cart-dropdown')
+        .forEach((el) => el.classList.remove('show'))
+      if (!isVisible) {
+        renderMiniCart()
+        cartDropdown.classList.add('show')
+      }
+    })
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!cartWrapper.contains(e.target)) {
+        cartDropdown.classList.remove('show')
+      }
+    })
+  }
 })
+
+function renderMiniCart() {
+  const cart = JSON.parse(localStorage.getItem('cart') || '[]')
+  const cartItems = document.getElementById('cartItems')
+  const cartTotal = document.getElementById('cartTotal')
+
+  if (!cartItems || !cartTotal) return
+
+  if (cart.length === 0) {
+    cartItems.innerHTML = '<p>Your cart is empty.</p>'
+    cartTotal.textContent = ''
+    return
+  }
+
+  let total = 0
+  let html = ''
+
+  cart.forEach((item, index) => {
+    total += item.price * item.quantity
+    html += `
+      <div class="cart-item">
+        <img src="${item.image}" alt="${item.name}">
+        <div>
+          <strong>${item.name}</strong><br>
+          £${item.price.toLocaleString()} × ${item.quantity}
+        </div>
+        <button onclick="removeFromCart(${index})">✕</button>
+      </div>
+    `
+  })
+
+  cartItems.innerHTML = html
+  cartTotal.textContent = `Total: £${total.toLocaleString()}`
+}
+
+function removeFromCart(index) {
+  const cart = JSON.parse(localStorage.getItem('cart') || '[]')
+  cart.splice(index, 1)
+  localStorage.setItem('cart', JSON.stringify(cart))
+  updateCartCount()
+  renderMiniCart()
+}
