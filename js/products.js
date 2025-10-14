@@ -179,6 +179,19 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     })
   }
+  if (clearCartBtn) {
+    clearCartBtn.addEventListener('click', () => {
+      localStorage.removeItem('cart')
+      updateCartCount()
+      renderMiniCart()
+    })
+  }
+
+  if (checkoutBtn) {
+    checkoutBtn.addEventListener('click', () => {
+      alert('Checkout feature coming soon!')
+    })
+  }
 })
 
 function renderMiniCart() {
