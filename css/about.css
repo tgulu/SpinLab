@@ -13,6 +13,14 @@
 .about-us-container {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 1200px) {
+  .about-us-container {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .about-us-title {
@@ -36,23 +44,26 @@
 .about-us-container p {
   font-size: 16px;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 @media (min-width: 1200px) {
   .about-us-container p {
     font-size: 28px;
     margin-bottom: 10px;
+    text-align: left;
   }
 }
 
 .about-us-image {
-  width: 120px;
-  height: auto;
+  width: 200px;
+  height: 180px;
 }
 
 @media (min-width: 1200px) {
   .about-us-image {
     width: 400px;
+    height: 350px;
   }
 }
 
@@ -84,10 +95,20 @@
   max-width: 500px;
 }
 
-.contact-container > div:last-child {
+.map_img {
+  width: 300px;
+  height: auto;
+}
+
+@media (min-width: 1200px) {
+  .map_img {
+    width: 500px;
+  }
+}
+/* .contact-container > div:last-child {
   flex: 1;
   max-width: 500px;
-}
+} */
 
 .contact-container input[type='submit'] {
   cursor: pointer;
@@ -119,7 +140,13 @@
 .contact-container form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 3px;
+}
+
+@media (min-width: 1200px) {
+  .contact-container form {
+    gap: 15px;
+  }
 }
 
 .contact-container label {
@@ -141,7 +168,7 @@
   padding: 15px;
   border: 2px solid #e0e0e0;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 12px;
   font-family: Inter;
   transition: border-color 0.3s ease;
   box-sizing: border-box;
@@ -186,11 +213,6 @@
 .contact-container textarea:focus {
   outline: none;
   border-color: var(--primary);
-}
-
-.map_img {
-  width: 500px;
-  height: auto;
 }
 
 .card p {
