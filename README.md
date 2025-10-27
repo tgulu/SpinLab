@@ -2,6 +2,11 @@
 
 ## Overview
 
+##
+
+Live Demo:
+https://tgulu.github.io/SpinLab/
+
 SpinLab is an e-commerce website specializing in high-quality audio equipment for musicians and DJs. Founded in 2025, the platform serves as a comprehensive marketplace for professional-grade instruments, DJ equipment, and studio gear.
 
 ## Technology Stack
